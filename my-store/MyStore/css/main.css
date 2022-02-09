@@ -21,6 +21,21 @@ body {
 
 
 /*---- Menu ----*/
+.logo {
+  height: 20px;
+}
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.nav-list {
+  display: flex;
+}
+.nav-item {
+  margin-left: 24px;
+}
 
 /*---- Hero Section ----*/
 .hero-section {
@@ -79,17 +94,48 @@ body {
 }
 
 /*---- Product Section ----*/
+.sticky-menu {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -16px;
+  margin-right: -16px;
+ }
+
 .product-item {
+  position: relative;
   width: calc(100% / 3);
   margin-bottom: 16px;
+  padding: 0px 16px;
+  box-sizing: border-box;
 }
 
 .product-item-image {
   width: 100%;
+  height: 250px;
   font-size: 18px;
   font-weight: 600;
   border-radius: 18px;
+  object-fit: cover;
   margin-bottom: 12px;
+}
+.product-label {
+  position: absolute;
+  background-color: #f87060;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px;
+  width: fit-content;
+  top: 24px;
+  left: -8px;
 }
 
 .product-item-title {
