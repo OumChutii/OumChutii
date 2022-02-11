@@ -1,0 +1,10 @@
+element.style {
+}
+@media screen and (max-width: 750px)
+.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter {
+    display: block;
+    float: none;
+    width: auto;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
