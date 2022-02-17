@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&display=swap');
+
+:root{
+    --primary-background-color: #f6f6f6;
+
+    --primary-text-color: #f85f6a;
+    --secondary-text-color: #a9b3bb;
+
+    --primary-navfooter-color: #929292;
+    --secondary-navfooter-color: #d7d7d7;
+
+    --donut-chart-color-1: #f85f6a;
+    --donut-chart-color-2: #5e6af7;
+    --donut-chart-color-3: #7ce3ae;
+
+    --primary-button-color: #72bb52;
+    --secondary-button-color: #ca0000;
+
+    --primary-icon-color: #4d4d4d;
+    
+    --primary-button-meal: #c0c0c0;
+}
+
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.topnav {
+    background-color: #7ce3ae;
+}
+
+.logout {
+    padding: 0 0;
+    border: 1px solid red;
+    /* margin: 0 -15px; */
+}
+
+.linkmenu {
+    display: block;
+    text-align: right;
+}
+
+.logout a {
+    display: block;
+    text-align: right;
+}
+/*
+วิธีใช้
+li{
+    color: var(--primary-text-color);
+}*/
