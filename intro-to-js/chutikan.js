@@ -8,5 +8,5 @@ function askMyName() {
  
 function helloWorld() {
     const h1message = document.getElementById('name').innerHTML;
-    alert(h1message + 'ทำงานให้เหงื่อออกทางรูขุมขน ดีกว่าขี้เกียจแล้วยากจน จนน้ำล้นออกทางตา')
+    alert(h1message + 'มือใหม่หัดขับ')
  }
