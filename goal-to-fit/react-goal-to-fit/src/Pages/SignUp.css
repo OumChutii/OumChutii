@@ -37,7 +37,7 @@ label{
     /* border: 2px solid rgb(47, 0, 255); */
 }
 
-.log-in{
+.signup{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -48,11 +48,11 @@ label{
 
 }
 
-.log-in input{
+.signup input{
     border-bottom: 1px solid #9c9c9c;
 }
 
-.button-log-in {
+.button-signup {
     align-self: center;
     border: none;
     border-radius: 10px;

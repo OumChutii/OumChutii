@@ -1,0 +1,29 @@
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  padding: 1.5rem;
+  margin: 0;
+  height: 100vh;
+}
+
+.bold {
+  font-weight: 700;
+  color: black;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.container {
+  height: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+} */
