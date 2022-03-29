@@ -1,19 +1,23 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-
-
+import React from "react";
 import './NoAccount.css';
 
-const NoAccount = ({ isLoggedIn = false, signUpPath= '/signup' }) => {
-
-  if(isLoggedIn) return null;
+const NoAccount = ( { tagtitle, textA1, textA2, href1 = '#', href2 = '#'  } ) => {
+    return (
+          <>
+            <p className="secondary-text-color" >
+                {tagtitle} 
+            </p>
+            <div className="social-profiles">
+                <div>
+                 <a href={href1}>{textA1}</a>
+                </div>
+                <div>
+                 <a className="primary-text-color" href={href2}>{textA2}</a>
+                </div>
+            </div>
   
-  return (<div className='no-account'>
-            Don’t have an account?
-            <span className='bold signup'>
-                <Link to={signUpPath} className='signup pointer'>Sign Up</Link>
-            </span>
-          </div>);
+          </>  
+    );
 }
 
 export default NoAccount;

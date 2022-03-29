@@ -1,12 +1,13 @@
-import React from 'react';
-
+import React from "react";
 import './Input.css';
 
-const Input = ({isInvalid = false, ...props}) => {
-  return <>  
-          <input class={isInvalid ? 'error' : ''} {...props} />
-          {isInvalid && <div class='error-text'>Email is invalid</div>}
-         </>;
+const Input = ( { htmlFor, label, ...props }) => {
+    return (
+                <div>
+                    <label className="primary-text-color" htmlFor={htmlFor} > {label} </label>
+                    <input {...props}/>
+                </div>
+    );
 }
 
 export default Input;
