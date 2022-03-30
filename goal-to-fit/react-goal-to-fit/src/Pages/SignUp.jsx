@@ -7,10 +7,10 @@ const SignUp = () => {
 
             {/* <section>
             <div>Sign Up</div>
-            <label for="">Email</label>
+            <label htmlFor="">Email</label>
             <input type="text">
             <hr>
-            <label for="">Password</label>
+            <label htmlFor="">Password</label>
             <input type="text">
             <hr>
             <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
