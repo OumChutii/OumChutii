@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from './Pages/Login';
 import './App.css';
+import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import ActivityReport from './Pages/ActivityReport';
 

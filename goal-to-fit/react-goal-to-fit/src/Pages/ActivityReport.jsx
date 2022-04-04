@@ -1,6 +1,7 @@
 import React from "react";
 import './ActivityReport.css';
 import Footer from '../components/Footer/Footer';
+import NavBar from "../components/NavBar/NavBar";
 
 
 const ActivityReport = () => {
@@ -9,88 +10,7 @@ const ActivityReport = () => {
         {/* <!-- ใส่ background พื้นหลังทั้งหน้าจอ ที่ tag body --> */}
         <div className="wrapper">
             {/* <!-- TOP NAV START --> */}
-            <div className="topnav"> 
-            {/* <!-- ใส่สี background nav ที่ คลาสนี้ --> */}
-                <nav className="container">
-                    <div className="row justify-content-between align-items-center">
-                        <div className="col-12 d-flex d-md-none top-btn-create">
-                            {/* <!-- Left Button --> */}
-                            <a href="#" id="nav-btn-logout" className="nav-btn-logout d-flex">
-                                <i className="fa fa-power-off"></i>
-                            </a>
-                            {/* <!-- Right Button --> */}
-                            <a href="ActivityCreate.html" id="nav-btn-plus" className="nav-btn-plus d-flex">
-                                <i className="fa fa-plus"></i>
-                            </a>
-                        </div>
-                        {/* <!-- Bottom Nav Icon --> */}
-                        <div className="col-12 d-block d-md-none">
-                            <ul className="menu-icon-bottom d-flex">
-                                <li className="menu-icon active">
-                                    <a href="ActivityReport.html">
-                                        <i className="fa fa-home"></i>
-                                    </a>
-                                </li>
-                                <li className="menu-icon">
-                                    <a href="#">
-                                        <i className="fa fa-cart-flatbed"></i>
-                                    </a>
-                                </li>
-                                <li className="menu-icon">
-                                    <a href="#">
-                                        <i className="fa fa-lemon"></i>
-                                    </a>
-                                </li>
-                                <li className="menu-icon">
-                                    <a href="#">
-                                        <i className="fa fa-user"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        {/* <!-- Top Nav Menu --> */}
-                        <div className="col-12 col-md-5 d-flex align-items-center">
-                            <img src="./image.png" alt="Logo Goal to fit" className="logo-title d-none d-md-block" />
-                            <h2 className="nav-title primary-text-color">Activity reports</h2>
-                        </div>
-                        <div className="col-md-7 d-none d-md-block">
-                            <ul className="nav-item d-none d-md-flex">
-                                <li className="nav-list">
-                                    <a href="ActivityReport.html" className="d-flex">
-                                        <i className="fa fa-home mr-1"></i>
-                                        <p>Home</p>
-                                    </a>
-                                </li>
-                                <li className="nav-list">
-                                    <a href="#" className="d-flex">
-                                        <i className="fa fa-cart-flatbed mr-1"></i>
-                                        <p>Shop</p>
-                                    </a>
-                                </li>
-                                <li className="nav-list">
-                                    <a href="#" className="d-flex">
-                                        <i className="fa fa-lemon mr-1"></i>
-                                        <p>Meal</p>
-                                    </a>
-                                </li>
-                                <li className="nav-list">
-                                    <a href="#" className="d-flex">
-                                        <i className="fa fa-user mr-1"></i>
-                                        <p>Profile</p>
-                                    </a>
-                                </li>
-                                <li className="nav-list ml-md-4 ml-lg-5">
-                                    <a href="#" className="d-flex primary-red">
-                                        <i className="fa fa-power-off mr-1"></i>
-                                        <p>Logout</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        {/* <!-- Top Nav Menu --> */}
-                    </div>
-                </nav>
-            </div>
+            <NavBar pageTitle="Activity Report" />
             {/* <!-- TOP NAV END --> */}
             <hr className="d-none d-md-block mt-0 mb-0" />
             {/* <!-- -------------------------------------------------------------------------- --> */}
@@ -599,11 +519,7 @@ const ActivityReport = () => {
     
         
         {/* <!-- FOOTER START --> */}
-        <Footer>
-            <div className="container">
-                <p className="font-subhead">Copyright &copy; 2022 :&nbsp;<a href="/goal-to-fit/activity_report.html">Goal to fit</a></p>
-            </div>
-        </Footer>
+        <Footer>@Copy Right 2022 : Goal to fit</Footer>
         {/* <!-- FOOTER END --> */}
     </div>
 
