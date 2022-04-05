@@ -363,7 +363,7 @@ margin-top: -3px;
 }
 
 #score .score-card {
-background-image: url(../../public/score-bg.jpg);
+/* background-image: url(../../public/score-bg.jpg); */
 background-size: cover;
 background-position: -130px center;
 background-repeat: none;
@@ -598,7 +598,7 @@ height: 100%;
 line-height: 0.8em;
 font-size: 3.5em;
 color: transparent;
-background-image: url(../../public/Masters-Sprint.jpg);
+/* background-image: url(../../public/Masters-Sprint.jpg); */
 background-size: cover;
 background-clip: text;
 -webkit-background-clip: text;

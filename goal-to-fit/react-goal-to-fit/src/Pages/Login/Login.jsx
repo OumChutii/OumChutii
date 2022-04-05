@@ -1,11 +1,11 @@
 import React from 'react';
 import './Login.css';
-import ImageTitle from '../components/ImageTitle/ImageTitle';
-import Title from '../components/Title/Title';
-import Input from '../components/Input/Input';
-import Button from '../components/Button/Button';
-import Footer from '../components/Footer/Footer';
-import NoAccount from '../components/NoAccount/NoAccount';
+import ImageTitle from '../../components/ImageTitle/ImageTitle';
+import Title from '../../components/Title/Title';
+import Input from '../../components/Input/Input';
+import Button from '../../components/Button/Button';
+import Footer from '../../components/Footer/Footer';
+import NoAccount from '../../components/NoAccount/NoAccount';
 
 
 const Login = () => {

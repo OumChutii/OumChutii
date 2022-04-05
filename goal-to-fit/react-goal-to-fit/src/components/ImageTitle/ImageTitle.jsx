@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
+import './ImageTitle.css'
 
-import './ImageTitle.css';
-
-const ImageTitle = ({ title, imgSrc = './logo.png' }) => {
- return (
-        <div className="head-logo">
-          <img className='icon-logo' src={imgSrc} />
-          <h3 className='secondary-text-color'>{title}</h3>
-        </div>);
+const ImageTitle = ( { children, imgSrc, classDiv, classImg }) => {
+    return (
+                <div className={classDiv}>
+                    <img  src={imgSrc}/>                       
+                    <h1 className="secondary-text-color">{children}</h1>
+                </div>
+    );
 }
 
 export default ImageTitle;

@@ -1,13 +1,12 @@
 import React from "react";
 import './ActivitySelection.css';
-import Footer from "../components/Footer/Footer";
-import NavBar from "../components/NavBar/NavBar";
-import Button from "../components/Button/Button";
-import JSONDATA from "../../Datatest.json";
+import Footer from "../../components/Footer/Footer";
+import NavBar from "../../components/NavBar/NavBar";
+import Button from "../../components/Button/Button";
+
 
 const ActivitySelection = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-
+    
     return (
         <div>
             {/* <!-- TOP NAV START --> */}

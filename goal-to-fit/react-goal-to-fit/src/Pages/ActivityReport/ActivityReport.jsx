@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import './ActivityReport.css';
-import Footer from '../components/Footer/Footer';
-import NavBar from "../components/NavBar/NavBar";
+import Footer from '../../components/Footer/Footer';
+import NavBar from "../../components/NavBar/NavBar";
 
 
 const ActivityReport = () => {
@@ -497,12 +497,12 @@ const ActivityReport = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-12 col-lg-7 order-last px-0" id="ads">
+                        {/* <div className="col-12 col-md-12 col-lg-7 order-last px-0" id="ads">
                             <div className="ads-fit">
                                 <img src="./Masters-Sprint.jpg" alt="master athlete sprint" className="ads-img" />
                                 <h3 className="ads-head weight-900 p-2 text-right">GO<br />TO BE<br />MASTER</h3>
                             </div>
-                        </div>
+                        </div> */}
                         {/* <!-- RIGHT COLUMN END --> */}
     
     

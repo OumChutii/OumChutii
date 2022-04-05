@@ -1,7 +1,27 @@
-label{
+.add-input label{
     margin-top: 1em;
 }
 
-input{
+.add-input input{
     border-bottom: 1px solid #9c9c9c;
+    width: 100%;
+}
+
+div p {
+    margin: 0;
+}
+
+input[type="date"], input[type="number"], input[type="time"], input[type="text"] {
+    border: 2px solid #929292;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 1em;    
+}
+
+.display-none{
+    display: none;
+}
+
+.display-block{
+    display: block;
 }

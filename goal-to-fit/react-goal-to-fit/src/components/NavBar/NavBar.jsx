@@ -1,8 +1,9 @@
 import React from "react";
 import "./NavBar.css"
+import NavBarButton from "./NavBarButton/NavBarButton";
 
 
-function NavBar({pageTitle}) {
+function NavBar({ pageTitle = "Please Add Pagetitle" }) {
 
     return (
         <div className="bg-nav">
@@ -12,47 +13,28 @@ function NavBar({pageTitle}) {
                     <div className="row w-100 mx-auto no-gutters">
                         <div className="col-4">
                             <a className="head-title" href="#">
-                                <img className="" src="./img/logo.png"  />
+                                <img className="" src="./img/gtf-logo.png" />
                                 <h2>{pageTitle}</h2>
                             </a>
                         </div>
                         <div className="col-8 d-flex justify-content-end align-items-center">
                             <ul className="menu-nav">
-                                <li className="menu-list">
-                                    <a href="#" className="menu-link">
-                                        <div className="menu-icon fa fa-home"></div>
-                                        <p className="menu-name">Home</p>
-                                    </a>
-                                </li>
-                                {/* <li className="menu-list">
-                                    <a href="#" className="menu-link">
-                                        <div className="menu-icon fa fa-cart-flatbed"></div>
-                                        <p className="menu-name">Shop</p>
-                                    </a>
-                                </li>
-                                <li className="menu-list">
-                                    <a href="#" className="menu-link">
-                                        <div className="menu-icon fa fa-lemon"></div>
-                                        <p className="menu-name">Meal</p>
-                                    </a>
-                                </li> */}
-                                <li className="menu-list">
-                                    <a href="#" className="menu-link">
-                                        <div className="menu-icon fa fa-user"></div>
-                                        <p className="menu-name">Profile</p>
-                                    </a>
-                                </li>
-                                <li className="menu-list ml-5">
-                                    <a href="#" className="menu-link btn-logout">
-                                        <div className="menu-icon fa fa-power-off"></div>
-                                        <p className="menu-name">Logout</p>
-                                    </a>
-                                </li>
+                                <NavBarButton fontAwesome="fa-home" aHref="#" >
+                                    Home
+                                </NavBarButton>
+                                <NavBarButton fontAwesome="fa-user" aHref="#" >
+                                    Profile
+                                </NavBarButton>
+                                <NavBarButton aClassName="menu-link btn-logout" fontAwesome="fa-power-off"
+                                    aHref="#" >
+                                    Logout
+                                </NavBarButton>
                             </ul>
                         </div>
                     </div>
                 </header>
             </nav>
+            <hr className="d-none d-md-block mt-0 mb-0" />
         </div>
 
     );
