@@ -1,6 +1,6 @@
 import React from "react";
 import './SignUp.css';
-import Footer from '../components/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 
 const SignUp = () => {
     return (
