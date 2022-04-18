@@ -5,10 +5,10 @@ import Footer from '../../components/Footer/Footer';
 import NavBar from "../../components/NavBar/NavBar";
 import dataActCard from '../../Pages/DataToTest/dataToActReportCard.json';
 import dataUser from '../../Pages/DataToTest/dataUserInfo.json';
-import UserInfo from './UserInfo/UserInfo';
-import DonutChart from './DonutChart/DonutChart';
-import ActivityGraph from './ActivityGraph/ActivityGraph';
-import ActivityCard from './ActivityCard/ActivityCard';
+import UserInfo from '../../components/ActivityReport/UserInfo/UserInfo';
+import DonutChart from '../../components/ActivityReport/DonutChart/DonutChart';
+import ActivityGraph from '../../components/ActivityReport/ActivityGraph/ActivityGraph';
+import ActivityCard from '../../components/ActivityReport/ActivityCard/ActivityCard';
 
 
 const ActivityReport = () => {
@@ -33,7 +33,7 @@ const ActivityReport = () => {
                         <div>
                             <div className="card-user-profile ">
                                 <div className="create-act-button ">
-                                    <NavLink to="/ativity-create" className="d-flex justify-content-center secondary-text-color align-items-center">
+                                    <NavLink to="/activity-create" className="d-flex justify-content-center secondary-text-color align-items-center">
                                         {/* <!-- Right Button --> */}
                                         <i className="fa fa-plus"></i>
                                         {/* <!-- Right Button --> */}

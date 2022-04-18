@@ -13,7 +13,7 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
                     <div className="row w-100 mx-auto no-gutters">
                         <div className="col-4">
                             <a className="head-title" href="#">
-                                <img className="" src="./logo.png" />
+                                <img className="" src="../images/logo.png" />
                                 <h2>{pageTitle}</h2>
                             </a>
                         </div>
