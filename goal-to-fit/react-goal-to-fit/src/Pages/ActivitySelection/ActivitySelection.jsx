@@ -3,100 +3,70 @@ import './ActivitySelection.css';
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import Button from "../../components/Button/Button";
+import SwitchButton from "../../components/SwitchButton/SwitchButton";
+import Input from "../../components/Input/Input";
 
 
-const ActivitySelection = () => {
-    
+const imageLogo = <img src="./logo.png" className="icon" />
+
+function ActivitySelection() {
     return (
-        <div>
-            {/* <!-- TOP NAV START --> */}
-            <NavBar pageTitle="Activity Selection" />
-            {/* <!-- TOP NAV END --> */}
-            <hr />
+        <>
+            <div className="wrapper">
+                <NavBar pageTitle="ActivitySelection" />
+                {/*  */}
 
-            {/* <!-- Activity selection  --> */}
-            <section>
-                <div>
-                    <input type="text" id="mySearch" onKeyUp="myFunction()" placeholder="Search.." title="Selection Activity" />
-                    <div>
-                        <img src="./src/img/200x200.gif" /> 
-                        <img src="./src/img/200x200.gif" /> 
-                        <img src="./src/img/200x200.gif" /> 
-                        <Button>Confirm</Button>        
-                    </div>
+                <section className="container container-activity-selection ">
+                    <div className="container-css-50">
+                        <Input className="add-input" type="text" id="Search" placeholder="Search.." title="Selection Activity"
 
-                    <div>
-                        <Button>Indoor Outdoor</Button>           
-                    </div>
-                    
-                </div>
-
-            
-                {/* <div className="row 
-                    <div className="row col-12">
-                    <input
-                        type="text"
-                        className="search__input text-center mb-24"
-                        placeholder="Search..."
-                        onChange={event => {
-                            setSearchTerm(event.target.value)
-                        }}
-                    />
-                    </div>
-                </div>
-                
-
-                    {JSONDATA.filter((val) => {
-                    if (searchTerm == "") {
-                    return val
-                    } else if (val.act.toLowerCase().includes(searchTerm.toLowerCase())) {
-                        return val
-                        }
-                    }).map((val, key) => {
-                        return (
-                            <div className="col-3 text-center mt-15" key={key}>
-                                <div id="act-icon">
-                                    <img className="pt-15" src={val.icon} alt="" />
-                                    <p>{val.act}</p>
-                                </div>
+                        />
+                        <div className="activity-select ">
+                            {imageLogo}
+                            {imageLogo}
+                            {imageLogo}
+                            <Button className="button-cf" type="submit" >Confirm</Button>
+                        </div>
+                        <SwitchButton classLabel="display-none" textLeft="Indoor" textRight="Outdoor" textOnSwitch="indoor-outdoor"
+                            inputName="toggle-1"
+                        />
+                        <div className="container-list">
+                            {/* <a href="#" >
+                                <i className="fas fa-chevron-left fa-5x" aria-hidden="true"></i>
+                            </a> */}
+                            <div className="activity-list">
+                                <input type="radio" name="activity" value="Run"></input>
+                                {imageLogo}
+                                <input type="radio" name="activity" value="Swim"></input>
+                                {imageLogo}
+                                <input type="radio" name="activity" value="Hiking"></input>
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
+                                {imageLogo}
                             </div>
-                        );
-                    })}
-                </div> */}
 
-                {/* <a href= "#" /> 
-                    <img src="#"alt= "Ex-images1" height ="20px" />
-                <ul >
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li> 
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>    
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>       
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>    
-                </ul>
+                            {/* <a href="#" >
+                                <i className="fas fa-chevron-right fa-5x" aria-hidden="true"></i>
+                            </a> */}
+                        </div>
+                    </div>
+                </section>
 
-                <ul >
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li> 
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>    
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>       
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>    
-                </ul>
-
-                <ul >
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li> 
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>    
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>       
-                    <li><img src="./src/img/200x200.gif" /><p>Lorem </p></li>    
-                </ul>
-                
-                <a href= "#" target="_blank" /> 
-                    <img src="#"alt= "Ex-images1" height ="20px" /> */}
-               
-            </section>
-
+                <div className="push"></div>
+            </div>
             <Footer>@Copy Right 2022 : Goal to fit</Footer>
+        </>
+    );
 
-
-        </div>
-    )
 }
-
-export default ActivitySelection;
+export default ActivitySelection; 

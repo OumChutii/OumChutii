@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "username": "chutikan",
+        "gender": "female"
+    },{
+        "id": 2,
+        "username": "lisa",
+        "gender": "female"
+    },{
+        "id": 3,
+        "username": "kim",
+        "gender": "male"
+    },{
+        "id": 4,
+        "username": "jan",
+        "gender": "female"
+    },{
+        "id": 5,
+        "username": "nick",
+        "gender": "male"
+    }
+]

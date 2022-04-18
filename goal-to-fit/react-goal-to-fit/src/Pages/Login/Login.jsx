@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { Link } from "react-router-dom";
 import './Login.css';
 import ImageTitle from '../../components/ImageTitle/ImageTitle';
 import Title from '../../components/Title/Title';
@@ -11,46 +12,42 @@ import NoAccount from '../../components/NoAccount/NoAccount';
 const Login = () => {
   return (
     <main> 
-        <section>
-            <div className='container'>  
-                <ImageTitle imgSrc='./image.png' title='Goal to fit'/>     
-                    <div className="login" >
-                    <Title title = "Login"/>  
-                    <Input htmlFor="Email" 
-                           label='Email'
-                           id='email' 
-                           type='text' 
-                           name='email' 
-                           placeholder='Enter your email' 
+          <section className="section-login">
+                <div className="container-login"> 
+                    <ImageTitle imgSrc={'./images/logo.png'} classDiv={"head-logo-image_title"}
+                    classImg={"icon-logo"}>
+                        Goal to fit
+                    </ImageTitle>                 
+                    <div className="login">
+                        <Title>Login</Title>
+                        <Input  className="add-input" htmlFor="email" label='Email'
+                                id='email' type='email' name='email' 
+                                placeholder='Enter your email' 
                                 //  value={email} 
                                 //  isInvalid={isInvalid}
                                 //  onChange={e => setEmail(e.target.value)}
-                    />
+                        /> 
+                        <Input className="add-input" htmlFor="password" label='Password' 
+                                id='Password'  type="password" placeholder="***********"                      
+                        />
+                       
+                        <Link to="/profile">
+                             <Button  type="submit" value="submit">Login</Button>
+                        </Link>                      
+                    </div>
 
-                    <Input htmlFor="Password" label='Password' 
-                                id='Password'  type="password" placeholder="***********" />
-                    
-                    
-                    <Button>Log in</Button>
-            </div>
-    
-            <div>
-                <NoAccount tagtitle='Don’t have an account?'
-                       textA1='Forgot Password?'
-                       textA2='Sign Up'
-                />                
-            </div>
-
-            </div>
-        </section>
-
-        <Footer>
-            &copy; Right 2022 : Goal to fit
-        </Footer>
+                    <NoAccount tagtitle='Don’t have an account?'
+                               textA1='Forgot Password?' href1="/"
+                               textA2='Sign Up' href2="/signup"
+                               
+                    />                
+                </div>
+          </section>
+          
+          <Footer>©Copy Right 2022 : Goal to fit</Footer>
 
     </main>
   );
 }
 
 export default Login;
-

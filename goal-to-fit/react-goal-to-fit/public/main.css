@@ -21,14 +21,14 @@
 
 /* หากต้องการเพิ่มหรือแก้ไขให้เหมาะสมขึ้น สามารถทำได้ และแจ้งให้ทุกคนทราบด้วย */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&display=swap');
 
 :root{
     --primary-background-color: #f6f6f6;
 
     --primary-text-color: #f85f6a;
-    --secondary-text-color: #a9b3bb;
+    --secondary-text-color: #929292;
+    --third--text-color:  #a9b3bb;
 
     --primary-navfooter-color: #929292;
     --secondary-navfooter-color: #d7d7d7;
@@ -73,6 +73,9 @@ li{
 .secondary-text-color{
     color: var(--secondary-text-color);
 }
+.third--text-color{
+    color: var(--third--text-color);
+}
 .primary-icon-color{
     color: var(--primary-icon-color);
 }
@@ -80,6 +83,16 @@ li{
     color: var(--secondary-icon-color);
 }
 /* สีหลัก รอง ของ ข้อความ และ ไอคอน */
+
+.primary-button-color{
+    color: var(--primary-button-color);
+    filter:drop-shadow(3px 1px 4px  #58ff37);
+    
+}
+.secondary-button-color{
+    color: #ff9800;
+    filter:drop-shadow(3px 1px 4px #ff9800);
+}
 
 
 /* ตัวอักษร บาง หนา */
@@ -127,10 +140,11 @@ a{
 body{
     font-family: Roboto, sans-serif;
     height: 100%;
+    /* background-color: var(--primary-background-color); */
     
 }
 
-nav::after{ /* เส้นใต้ nav */
+/* nav::after{ เส้นใต้ nav
     content: "";
     display: block;
     width: 100%;
@@ -138,73 +152,24 @@ nav::after{ /* เส้นใต้ nav */
     border-top: 1px solid lightgray;
     margin-top: 10px;
     margin-bottom: 10px;
-}
+} */
 
-.nav-header{
-    padding-top: 10px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
-.head-title,
-.head-title:visited,
-.menu-link,
-.menu-link:visited{
-    color: var(--secondary-text-color);
-}
-.head-title{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2em;
-}
-.head-title h2{
-    margin-bottom: 0;
-    margin-left: 10px;
-}
-/* menu start */
-.menu-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0; /* reset margin ของ boostrap ใน tag ul */
-}
-.menu-list{
-    list-style: none;
-    margin-left: 10px;
-}
-.menu-link{
-    font-size: .9em;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    color: var(--primary-icon-color);
-}
-.menu-link.btn-logout{
-    color: var(--primary-text-color);
-}
-.menu-name{
-    margin: 0 5px; /* reset margin-bottom ของ boostrap ใน tag p */
-    width: 100%;
-    margin-top: 1px;
-    text-align: center;
-}
+/* input{
+    background-color: var(--primary-background-color);
+} */
 
-/* menu hover start */
-.menu-list:hover .menu-name{
-    font-weight: 500;
-}
+
+
+
+
 /* menu hover end */
 /* menu end */
 
 
 /* section start */
-section{
+/* section{
     margin: 40px 0;
-}
+} */
 /* section end */
 
 
