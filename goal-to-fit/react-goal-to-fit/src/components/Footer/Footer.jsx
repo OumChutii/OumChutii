@@ -1,7 +1,7 @@
 import React from "react";
-import './Footer.css';
+import "./Footer.css"
 
-const Footer = ( { children }) => {
+const Footer = ( { children = "© Right 2022 : Goal to fit" }) => {
     return (
           <>
             <div className="push"></div>

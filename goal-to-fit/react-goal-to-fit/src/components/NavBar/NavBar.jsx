@@ -1,6 +1,8 @@
 import React from "react";
 import "./NavBar.css"
 import NavBarButton from "./NavBarButton/NavBarButton";
+import { Link } from "react-router-dom";
+
 
 
 function NavBar({ pageTitle = "Please Add Pagetitle" }) {
@@ -11,24 +13,31 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
             <nav className="container">
                 <header className="nav-header">
                     <div className="row w-100 mx-auto no-gutters">
-                        <div className="col-4">
-                            <a className="head-title" href="#">
-                                <img className="" src="../images/logo.png" />
+                        <div className="col-6">
+                            <div className="head-title">
+                                <img className="" src="./img/gtf-logo.png" alt="img-logo" />
                                 <h2>{pageTitle}</h2>
-                            </a>
+                            </div>
                         </div>
-                        <div className="col-8 d-flex justify-content-end align-items-center">
+                        <div className="col-6 d-flex justify-content-end align-items-center">
                             <ul className="menu-nav">
-                                <NavBarButton fontAwesome="fa-home" aHref="#" >
-                                    Home
-                                </NavBarButton>
-                                <NavBarButton fontAwesome="fa-user" aHref="#" >
-                                    Profile
-                                </NavBarButton>
-                                <NavBarButton aClassName="menu-link btn-logout" fontAwesome="fa-power-off"
-                                    aHref="#" >
-                                    Logout
-                                </NavBarButton>
+                                <Link to="/activity-report" >
+                                    <NavBarButton aClassName="menu-link secondary-text-color" fontAwesome="fa-home" aHref="#" >
+                                        Home
+                                    </NavBarButton>
+                                </Link>
+                                <Link to="/profile">
+                                    <NavBarButton aClassName="menu-link secondary-text-color" fontAwesome="fa-user" aHref="#" >
+                                        Profile
+                                    </NavBarButton>
+                                </Link>
+                                <Link to="/login">
+                                    <NavBarButton aClassName="menu-link btn-logout" fontAwesome="fa-power-off"
+                                        aHref="#" >
+                                        Logout
+                                    </NavBarButton>
+                                </Link>
+
                             </ul>
                         </div>
                     </div>

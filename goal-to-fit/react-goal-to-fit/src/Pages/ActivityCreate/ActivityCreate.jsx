@@ -5,12 +5,12 @@ import Footer from "../../components/Footer/Footer";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
-// import 'font-awesome/css/font-awesome.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import "./ActivityCreate.css";
 import IconAct from "../../components/IconAct/IconAct";
-import ActIcon from "./dataActIcon.json";
+import ActIcon from "../DataToTest/dateActIcon.json";
 import { Navigate } from "react-router-dom";
-// import { icon } from "@fortawesome/fontawesome-svg-core";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 
 function ActivityCreate() { 
@@ -268,7 +268,7 @@ function ActivityCreate() {
 
                 <div className="push"></div>
             </div>
-            <Footer />
+            <Footer>©Copy Right 2022 : Goal to fit</Footer>
         </>
     );
 

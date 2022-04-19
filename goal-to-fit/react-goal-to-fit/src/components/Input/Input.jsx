@@ -1,13 +1,22 @@
 import React from "react";
 import './Input.css'
 
-const Input = ( {children="", htmlFor="", label="",className ="display-block" , ...props }) => {
+const Input = ({ children = "", htmlFor = "", label = "", className = "display-block",  ...props }) => {
+
+
+
     return (
-                <div className={className}>
-                    <label className="primary-text-color" htmlFor={htmlFor} > {label} </label>
-                    <input {...props}/>
-                    <p className="primary-text-color">{children}</p>
-                </div>
+        <span className={className}>
+            <label hidden={label === "" ? true : false} className= "secondary-text-color middle-font"
+                htmlFor={htmlFor}
+            >
+                {label}
+            </label>
+            <input {...props} required />
+            <p className={`${children === "" ? "display-none" : "display-block"}  primary-text-color p-input`}
+               
+            >{children}</p>
+        </span>
     );
 }
 

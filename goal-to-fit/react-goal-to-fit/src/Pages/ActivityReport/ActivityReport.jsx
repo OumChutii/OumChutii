@@ -86,7 +86,7 @@ const ActivityReport = () => {
                 </section>
                 {/* <!-- MAIN CONTENT SECTION END --> */}
                 <div className="push"></div>
-                <Footer />
+                <Footer>©Copy Right 2022 : Goal to fit</Footer>
             </div>
         </>
 

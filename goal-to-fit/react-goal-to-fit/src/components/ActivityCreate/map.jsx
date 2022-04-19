@@ -1,4 +1,4 @@
-
+     
                                     {Array.isArray(JSONDATA) && JSONDATA.map((icon) => {
                                         return <IconAct iconResults={icon}
                                             key={icon.id}

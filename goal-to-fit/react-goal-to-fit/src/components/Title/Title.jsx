@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import './Title.css'
 
-import './Title.css';
-
-const Title = ({ children, title }) => {
-  return <h1 className='title'>{children || title}</h1>;
-}
-
-export default Title;
+const Title = ({ children }) => {
+    return (
+      <div>                     
+            <h3 className="secondary-text-color">{ children } </h3>
+      </div>
+    );
+  }
+  
+  export default Title;
