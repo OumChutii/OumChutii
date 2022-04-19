@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
+import "./ActivityCreate.css";
+import 'font-awesome/css/font-awesome.min.css';
 
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
-import 'font-awesome/css/font-awesome.min.css';
-import "./ActivityCreate.css";
 import IconAct from "../../components/IconAct/IconAct";
-import ActIcon from "../DataToTest/dateActIcon.json";
-import { Navigate } from "react-router-dom";
-import { icon } from "@fortawesome/fontawesome-svg-core";
+import dataIconAct from "../DataToTest/dateActIcon.json";
 
 
-function ActivityCreate() { 
+
+function ActivityCreate() {
     const [searchTerm, setSearchTerm] = useState("");
     const [isIndoor, setIsIndoor] = useState(false);
     const [resultIcon, setResultIcon] = useState([]);
@@ -28,8 +28,8 @@ function ActivityCreate() {
 
     useEffect(() => {
 
-        const iconIndoor = ActIcon.filter((icon) => icon.type === "indoor")
-        const iconOutdoor = ActIcon.filter((icon) => icon.type === "outdoor")
+        const iconIndoor = dataIconAct.filter((icon) => icon.type === "indoor")
+        const iconOutdoor = dataIconAct.filter((icon) => icon.type === "outdoor")
 
         setResultIcon(isIndoor ? iconIndoor : iconOutdoor)
 
@@ -111,7 +111,7 @@ function ActivityCreate() {
     // user userSubmit 
     useEffect(() => {
 
-        if (addActivity != "" && actDate != "" && actQuantity != "" && actDurationTime != "") {
+        if (addActivity !== "" && actDate !== "" && actQuantity !== "" && actDurationTime !== "") {
             setActDisabledSubmit(false)
             return
         } else {
@@ -178,12 +178,13 @@ function ActivityCreate() {
                         />
                         <div className="container-list ">
                             <div className="activity-list">
-                                {resultIcon.filter((value) => {
-                                    if (searchTerm == "") {
+                                {resultIcon.filter((value) => {                                    
+                                    if (searchTerm === "") {
                                         return value
                                     } else if (value.name.toLowerCase().includes(searchTerm.toLowerCase())) {
                                         return value
                                     }
+                                    return value
                                 }).map((icon, index) => {
 
                                     return (
@@ -268,10 +269,9 @@ function ActivityCreate() {
 
                 <div className="push"></div>
             </div>
-            <Footer>©Copy Right 2022 : Goal to fit</Footer>
+            <Footer />
         </>
     );
 
 }
-
 export default ActivityCreate;

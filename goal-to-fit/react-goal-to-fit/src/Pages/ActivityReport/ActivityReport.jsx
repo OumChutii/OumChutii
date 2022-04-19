@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './ActivityReport.css';
 import Footer from '../../components/Footer/Footer';
 import NavBar from "../../components/NavBar/NavBar";
@@ -9,7 +9,6 @@ import UserInfo from '../../components/ActivityReport/UserInfo/UserInfo';
 import DonutChart from '../../components/ActivityReport/DonutChart/DonutChart';
 import ActivityGraph from '../../components/ActivityReport/ActivityGraph/ActivityGraph';
 import ActivityCard from '../../components/ActivityReport/ActivityCard/ActivityCard';
-
 
 const ActivityReport = () => {
 
@@ -22,6 +21,7 @@ const ActivityReport = () => {
                 {/* <!-- TOP NAV END --> */}
 
                 {/* <!-- -------------------------------------------------------------------------- -->
+                        
                         <!-- MAIN CONTENT SECTION START --> */}
                 <section className="container-activity-report " >
                     <div className="container-css-50 ">
@@ -33,7 +33,7 @@ const ActivityReport = () => {
                         <div>
                             <div className="card-user-profile ">
                                 <div className="create-act-button ">
-                                    <NavLink to="/activity-create" className="d-flex justify-content-center secondary-text-color align-items-center">
+                                    <NavLink to="/ativity-create" className="d-flex justify-content-center secondary-text-color align-items-center">
                                         {/* <!-- Right Button --> */}
                                         <i className="fa fa-plus"></i>
                                         {/* <!-- Right Button --> */}
@@ -76,7 +76,7 @@ const ActivityReport = () => {
                         <div>
                             <div className="col-12  px-0" id="ads">
                                 <div className="ads-fit">
-                                    <img src="./Masters-Sprint.jpg" alt="master athlete sprint" className="ads-img" />
+                                    <img src="./img/Masters-Sprint.jpg" alt="master athlete sprint" className="ads-img" />
                                     <h3 className="ads-head weight-900 p-2 text-right">GO<br />TO BE<br />MASTER</h3>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ const ActivityReport = () => {
                 </section>
                 {/* <!-- MAIN CONTENT SECTION END --> */}
                 <div className="push"></div>
-                <Footer>©Copy Right 2022 : Goal to fit</Footer>
+                <Footer />
             </div>
         </>
 

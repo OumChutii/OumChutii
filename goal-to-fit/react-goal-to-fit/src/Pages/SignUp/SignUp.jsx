@@ -8,7 +8,8 @@ import Title from "../../components/Title/Title";
 import NoAccount from "../../components/NoAccount/NoAccount";
 import AgreeMent from "../../components/AgreeMent/AgreeMent";
 
-const SignUp = () => {
+
+const Signup = () => {
     const [value, setValue] = useState(false);
 
     let checkboxValue = '';
@@ -80,4 +81,4 @@ const SignUp = () => {
     );
 }
 
-export default SignUp;
+export default Signup;

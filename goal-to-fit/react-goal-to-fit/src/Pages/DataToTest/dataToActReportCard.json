@@ -2,7 +2,7 @@
     {
         "id": "1",
         "image": "running-activity",
-        "src": "./images/icon/run.png",
+        "src": "./img/icon/run.png",
         "actName": "Running",
         "type":"outdoor",
         "actDate": "19/02/22",
@@ -11,7 +11,7 @@
     },{
         "id": "2",
         "image": "bicycle-activity",
-        "src": "./images/icon/bicycle.png",
+        "src": "./img/icon/bicycle.png",
         "actName": "Bicycle",
         "type":"outdoor",
         "actDate": "20/02/22",
@@ -20,7 +20,7 @@
     },{
         "id": "3",
         "image": "basketball-activity",
-        "src": "./images/icon/basketball.png",
+        "src": "./img/icon/basketball.png",
         "actName": "Basketball",
         "type":"outdoor",
         "actDate": "20/02/22",
@@ -29,7 +29,7 @@
     },{
         "id": "4",
         "image": "badminton-activity",
-        "src": "./images/icon/indoor/badminton.png",
+        "src": "./img/icon/indoor/badminton.png",
         "actName": "Badminton",
         "type":"indoor",
         "actDate": "21/02/22",
@@ -38,7 +38,7 @@
     },{
         "id": "5",
         "image": "yoga-activity",
-        "src": "./images/icon/indoor/yoga.png",
+        "src": "./img/icon/indoor/yoga.png",
         "actName": "Yoga",
         "type":"indoor",
         "actDate": "24/02/22",
@@ -47,7 +47,7 @@
     },{
         "id": "6",
         "image": "hula-hoop",
-        "src": "./images/icon/hula-hoop.png",
+        "src": "./img/icon/hula-hoop.png",
         "actName": "hula-hoop",
         "type":"outdoor",
         "actDate": "22/02/22",
@@ -56,7 +56,7 @@
     },{
         "id": "7",
         "image": "kayak",
-        "src": "./images/icon/kayak.png",
+        "src": "./img/icon/kayak.png",
         "actName": "Kayak",
         "type":"outdoor",
         "actDate": "24/02/22",
@@ -65,7 +65,7 @@
     },{
         "id": "8",
         "image": "run",
-        "src": "./images/icon/indoor/run.png",
+        "src": "./img/icon/indoor/run.png",
         "actName": "Running",
         "type":"indoor",
         "actDate": "25/02/22",
@@ -74,7 +74,7 @@
     },{
         "id": "9",
         "image": "badminton",
-        "src": "./images/icon/indoor/badminton.png",
+        "src": "./img/icon/indoor/badminton.png",
         "actName": "Badminton",
         "type":"indoor",
         "actDate": "26/02/22",
@@ -83,7 +83,7 @@
     },{
         "id": "10",
         "image": "bodyweigh",
-        "src": "./images/icon/indoor/bodyweight.png",
+        "src": "./img/icon/indoor/bodyweight.png",
         "actName": "Bodyweight",
         "type":"indoor",
         "actDate": "27/02/22",

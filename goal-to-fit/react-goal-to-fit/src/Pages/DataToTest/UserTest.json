@@ -13,11 +13,11 @@
         "gender": "male"
     },{
         "id": 4,
-        "username": "jan",
-        "gender": "female"
+        "username": "king",
+        "gender": "male"
     },{
         "id": 5,
-        "username": "nick",
+        "username": "jame",
         "gender": "male"
     }
 ]

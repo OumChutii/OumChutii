@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Navigate, Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import './UserAccount.css';
 
 import Footer from "../../components/Footer/Footer";
@@ -12,95 +12,95 @@ import InputSelect from "../../components/Input/InputSelect/InputSelect";
 import DATATEST from "../DataToTest/UserTest.json";
 import dataExerciseDay from "../DataToTest/dataExerciseDay.json";
 
-
-
-function UserAccount({ }) {
+const UserForm = () => {
     const [userName, setUserName] = useState("");
     const [takenName, setTakenName] = useState(false);
     const [gender, setGender] = useState("female");
-    const [userBirthDay, setUserBirthDay] = useState("");
+    const [userBirthDay, setUserBirthDay] = useState("")
     const [userAge, setUserAge] = useState("");
-    const [userHeight, setUserHeight] = useState("");
-    const [userWeight, setUserWeight] = useState("");
-    const [userBMI, setUserBMI] = useState("");
+    const [userHeight, setUserHeight] = useState("")
+    const [userWeight, setUserWeight] = useState("")
+    const [userBMI, setUserBMI] = useState("")
     const [userGoal, setUserGoal] = useState([{
         "goal": "",
         "quantity": "",
         "duration": ""
-    }]);
+    }])
     const [newExerciseDay, setNewExerciseDay] = useState({});
     const [allExerciseDay, setAllExerciseDay] = useState([]);
     const [isChecked, setIsChecked] = useState(false);
-    const [durationTime, setDurationTime] = useState("");
-    const [disabledSubmit, setDisabledSubmit] = useState(true);
+    const [durationTime, setDurationTime] = useState("")
+    const [disabledSubmit, setDisabledSubmit] = useState(true)
 
     // validate username
     let nameToCheck = "";
-    let userNameLength = userName.length < 4;
+    let userNameLength = userName.length < 4
 
     function handleChange(event) {
-        nameToCheck = event.target.value.toLocaleLowerCase();
+        nameToCheck = event.target.value.toLocaleLowerCase()
 
         // console.log(nameToCheck)
+
         if (DATATEST.find(data => data.username === nameToCheck || nameToCheck.length > 10)) {
 
-            setTakenName(true);
+            setTakenName(true)
 
             return;
         }
-        setTakenName(false);
+        setTakenName(false)
         setUserName(nameToCheck);
     }
     // add gender
     function addResul(result) {
 
         if (result) {
-            setGender("male");
+            setGender("male")
         } else {
-            setGender("female");
+            setGender("female")
         }
 
     }
     // add birth && calculate age
     function handleBirthDay(event) {
 
-        const birthDateString = event.target.value;
-        setUserBirthDay(birthDateString);
+        const birthDateString = event.target.value
+        setUserBirthDay(birthDateString)
         // birthday string to  birth date
-        const birthDate = new Date(birthDateString);
-        const toddy = new Date();
+        const birthDate = new Date(birthDateString)
+        const toddy = new Date()
 
-        const calculateAge = toddy.getFullYear() - birthDate.getFullYear();
+        const calculateAge = toddy.getFullYear() - birthDate.getFullYear()
         if (calculateAge <= 12) {
-            setUserAge("");
+            setUserAge("")
             return;
         }
-        setUserAge(calculateAge);
+        setUserAge(calculateAge)
 
     }
     // add Height
     function addHeigh(event) {
-        const heighCM = event.target.value;
-        setUserHeight(Number(heighCM));
+        const heighCM = event.target.value
+        setUserHeight(Number(heighCM))
     }
 
     // add Weight
     function addWeight(event) {
-        const weightKg = event.target.value;
-        setUserWeight(Number(weightKg));
+        const weightKg = event.target.value
+        setUserWeight(Number(weightKg))
     }
 
     useEffect(() => {
 
-        const heighM = userHeight / 100;
-        const calculateBMI = (userWeight / Math.pow(heighM, 2)).toFixed(1);
+        const heighM = userHeight / 100
+        const calculateBMI = (userWeight / Math.pow(heighM, 2)).toFixed(1)
 
-        setUserBMI(Number(calculateBMI));
+        setUserBMI(Number(calculateBMI))
 
 
-    }, [userHeight, userWeight]);
+    }, [userHeight, userWeight])
 
     // exerciseDay
+
     function addNewExerciseDay({ target }) {
         const { name, value } = target;
         setNewExerciseDay({ "name": name, "value": value });
@@ -113,49 +113,50 @@ function UserAccount({ }) {
     //     console.log(test)
     //     setNewExerciseDay(test)
     // }
+
     useEffect(() => {
 
         if (Object.keys(newExerciseDay).length === 0) {
-            return;
+            return
         } else if (allExerciseDay.find(exerciseDay => exerciseDay.name === newExerciseDay.name)) {
             setAllExerciseDay((prev) => {
-                return prev.filter((item) => item.name !== newExerciseDay.name);
+                return prev.filter((item) => item.name !== newExerciseDay.name)
             });
         } else {
             setAllExerciseDay((prev) => {
                 return [...prev, newExerciseDay];
             });
         }
-        setNewExerciseDay({});
+        setNewExerciseDay({})
 
 
-    }, [newExerciseDay]);
+    }, [newExerciseDay])
 
     // add Duration Time
     function addDurationTime(event) {
-        let value = event.target.value;
-        console.log(value);
+        let value = event.target.value
+        console.log(value)
         if (value.length === 2 || value.length === 5) {
-            value = value + ":";
+            value = value + ":"
         } else if (value.length > 8) {
-            return;
+            return
         }
-        setDurationTime(value);
+        setDurationTime(value)
 
     }
 
     // user userSubmit
     useEffect(() => {
 
-        if (userGoal.goal != "" && allExerciseDay.length != 0) {
-            setDisabledSubmit(false);
-            return;
+        if (userGoal.goal !== "" && allExerciseDay.length !== 0) {
+            setDisabledSubmit(false)
+            return
         } else {
-            setDisabledSubmit(true);
+            setDisabledSubmit(true)
         }
 
 
-    }, [userGoal, allExerciseDay]);
+    }, [userGoal, allExerciseDay])
 
 
 
@@ -165,34 +166,34 @@ function UserAccount({ }) {
 
     function resetFrom(event) {
         event.preventDefault();
-        setUserName("");
-        setTakenName(false);
+        setUserName("") ;
+        setTakenName(false) ;
         setGender("female");
-        setUserBirthDay("");
+        setUserBirthDay("")
         setUserAge("");
-        setUserHeight("");
-        setUserWeight("");
-        setUserBMI("");
+        setUserHeight("")
+        setUserWeight("")
+        setUserBMI("")
         setUserGoal([{
             "goal": "",
             "quantity": "",
             "duration": ""
-        }]);
+        }])
         setNewExerciseDay({});
-        setAllExerciseDay([]);
+        setAllExerciseDay([]);        
         setDurationTime("");
         setDisabledSubmit(true);
-        setIsChecked(!isChecked);
+        setIsChecked(!isChecked)     
     }
 
 
     return (
         <>
 
-            <section className="container-user-account ">
+            <section className="container-userfrom ">
                 <form>
                     <div className="user-profile secondary-text-color ">
-                        <ImageTitle imgSrc={'./images/logo.png'} classDiv={"profile-name-image_title"}
+                        <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"profile-name-image_title"} alt={"img-user"}
                             classImg={"icon-logo"}>{userName}</ImageTitle>
                         <Input placeholder="Add User Name " maxLength="10"
                             type="text" name="username" onChange={handleChange}
@@ -203,7 +204,7 @@ function UserAccount({ }) {
                         </Input>
                     </div>
                     <div className="user-infomation">
-                        <div>
+                        <div >
                             <SwitchButton textLeft="MALE" textRight="FEMELE" textOnSwitch="gender"
                                 inputName="gender" addResul={addResul} value={gender}
                             >
@@ -230,14 +231,14 @@ function UserAccount({ }) {
                             <Input htmlFor="weight" label="Weight" min="1" style={userWeight === "" ? { borderColor: "red" } : null}
                                 type="number" placeholder="(kg)" name="weight" onChange={addWeight} value={userWeight}
                             >
-                                {userWeight === "" ? `please insert your weight(kg)` : `your weight is  ${userWeight}`}
+                                {userWeight === "" ? `please insert your weight(kg)` : `your weight is  ${userWeight} & BMI ${userBMI}`}
 
                             </Input>
                         </div>
                     </div>
-                    <div className="user-goal">
+                    <div className="user-goal" >
 
-                        <InputSelect addUserGoal={setUserGoal}>Goal</InputSelect>
+                        <InputSelect addUserGoal={setUserGoal} >Goal</InputSelect>
 
 
                     </div>
@@ -250,14 +251,15 @@ function UserAccount({ }) {
                                     *
                                 </p>
                             </span>
-                            <div className="data-goal">
+                            <div className="data-goal" >
                                 {dataExerciseDay.map((text) => {
                                     return (<CheckDateBox key={text.name} name={text.name} value={[text.value]}
                                         onChange={addNewExerciseDay}
                                     >
                                         {text.children}
-                                    </CheckDateBox>);
-                                })}
+                                    </CheckDateBox>)
+                                })
+                                }
                             </div>
 
                         </div>
@@ -274,13 +276,13 @@ function UserAccount({ }) {
                     <div className="active-form">
                         <div>
 
-                            <Button type="submit" value="submit" onSubmit={userSubmit} disabled={disabledSubmit}>Save</Button>
+                            <Button type="submit" value="submit" onSubmit={userSubmit} disabled={disabledSubmit} >Save</Button>
 
                         </div>
                         <div>
 
                             <Button className="button-reset" type="reset" onClick={resetFrom} value="Reset">cancel</Button>
-                            {isChecked ? <Navigate to="/activity-report" /> : null}
+                            {isChecked?<Navigate to="/activity-report" /> : null}
                         </div>
                     </div>
                 </form>
@@ -291,4 +293,4 @@ function UserAccount({ }) {
     );
 }
 
-export default UserAccount;
+export default UserForm;

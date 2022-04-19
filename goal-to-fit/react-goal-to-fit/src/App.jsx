@@ -4,24 +4,26 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
-import UserAccount from './Pages/UserAccount/UserAccount';
+import UserForm from './Pages/UserForm/UserForm';
 import ActivityReport from './Pages/ActivityReport/ActivityReport';
 import ActivityCreate from './Pages/ActivityCreate/ActivityCreate';
 
-const App = () => {
+
+function App() {
   return (
-    <>
-      <BrowserRouter>
+
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/profile" element={<UserAccount/>}/>
-        <Route path="/activity-report" element={<ActivityReport />} /> 
-        <Route path="/activity-create" element={<ActivityCreate />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<UserForm />} />
+        <Route path="/activity-report" element={<ActivityReport />} />       
+        <Route path="/ativity-create" element={<ActivityCreate />} />
       </Routes>
-      </BrowserRouter>
-    </>
+    </BrowserRouter>
+
+
   );
 }
 
