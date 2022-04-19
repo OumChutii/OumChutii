@@ -5,19 +5,19 @@
         "gender": "female"
     },{
         "id": 2,
-        "username": "lisa",
-        "gender": "female"
+        "username": "wichapol",
+        "gender": "male"
     },{
         "id": 3,
-        "username": "kim",
+        "username": "ping",
         "gender": "male"
     },{
         "id": 4,
-        "username": "king",
+        "username": "krek",
         "gender": "male"
     },{
         "id": 5,
-        "username": "jame",
+        "username": "kai",
         "gender": "male"
     }
 ]
