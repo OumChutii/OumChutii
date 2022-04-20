@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './ActivityReport.css';
 import Footer from '../../components/Footer/Footer';
@@ -9,8 +9,28 @@ import UserInfo from '../../components/ActivityReport/UserInfo/UserInfo';
 import DonutChart from '../../components/ActivityReport/DonutChart/DonutChart';
 import ActivityGraph from '../../components/ActivityReport/ActivityGraph/ActivityGraph';
 import ActivityCard from '../../components/ActivityReport/ActivityCard/ActivityCard';
+import { getRecords } from "../../api";
 
 const ActivityReport = () => {
+    
+        const [actCardsResult, setActCardsResult] = useState("");
+        
+      
+        useEffect(() => {
+          (async () => {
+            const respons = await getRecords();
+            console.log(respons.status);
+            console.log(respons.statusText);
+            console.log(respons.data);
+      
+            if (respons.status === 200) {
+              const dataRec = respons.data.reverse();
+              setActCardsResult(dataRec);
+            } else {
+              alert("Cannot connect to server");
+            }
+          })(); //IIFE
+        }, []);
 
     return (
 

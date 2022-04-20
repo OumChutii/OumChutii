@@ -1,5 +1,5 @@
 const express = require("express");
-const RecordModel = require("../models/record");
+const RecordModel = require("../src/model/record");
 
 const router = express.Router();
 

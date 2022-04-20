@@ -10,17 +10,37 @@ import Button from "../../components/Button/Button";
 import SwitchButton from "../../components/SwitchButton/SwitchButton";
 import IconAct from "../../components/IconAct/IconAct";
 import dataIconAct from "../DataToTest/dateActIcon.json";
+import { getRecords } from "../../api";
 
 
 
 function ActivityCreate() {
-    const [searchTerm, setSearchTerm] = useState("");
+
+        useEffect(() => {
+          (async () => {
+            const respons = await getRecords();
+            console.log(respons.status);
+            console.log(respons.statusText);
+            console.log(respons.data);
+      
+            if (respons.status === 200) {
+              const dataRec = respons.data.reverse();
+              setActCardsResult(dataRec);
+            } else {
+              alert("Cannot connect to server");
+            }
+          })(); //IIFE
+        }, []);
+
+
+    const [searchTerm, setSearchTerm] = useState(""); 
     const [isIndoor, setIsIndoor] = useState(false);
     const [resultIcon, setResultIcon] = useState([]);
     const [actSelect, setActSelect] = useState("");
     const [isShowFrom, setisShowFrom] = useState(false);
     const [disabledCf, setDisabledCf] = useState(true);
     const [addActivity, setAddActivity] = useState("")
+    
 
     function addResul(result) {
         setIsIndoor(result)
